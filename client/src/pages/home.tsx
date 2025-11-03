@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { FileVideo, Building2, ShoppingBag, Shirt, Camera, Youtube, Clapperboard, ArrowRight, BarChart3, FileText, Zap } from "lucide-react";
+import { FileVideo, Building2, ShoppingBag, Shirt, Camera, Youtube, ArrowRight, BarChart3, FileText, Zap } from "lucide-react";
 import type { ProjectType } from "@shared/schema";
 
 const projectTypeConfig = {
@@ -35,12 +35,6 @@ const projectTypeConfig = {
     title: "YouTube Video",
     description: "Content creation & digital media",
     color: "text-red-600 dark:text-red-400"
-  },
-  animation_video: {
-    icon: Clapperboard,
-    title: "Animation Video",
-    description: "Explainer & motion graphic storytelling",
-    color: "text-amber-600 dark:text-amber-400"
   }
 };
 
@@ -99,7 +93,7 @@ export default function Home() {
                 </div>
                 <CardTitle>Choose Project Type</CardTitle>
                 <CardDescription>
-                  Select from {Object.keys(projectTypeConfig).length} video categories with tailored complexity questionnaires
+                  Select from 5 video categories with tailored complexity questionnaires
                 </CardDescription>
               </CardHeader>
             </Card>

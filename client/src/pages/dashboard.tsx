@@ -5,18 +5,17 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Badge } from "@/components/ui/badge";
 import { Input } from "@/components/ui/input";
 import { 
-  Plus,
-  Search,
-  FileText,
-  Calendar,
-  DollarSign,
+  Plus, 
+  Search, 
+  FileText, 
+  Calendar, 
+  DollarSign, 
   TrendingUp,
   Building2,
   ShoppingBag,
   Shirt,
   Camera,
   Youtube,
-  Clapperboard,
   ArrowRight
 } from "lucide-react";
 import type { Project, ProjectType } from "@shared/schema";
@@ -28,8 +27,7 @@ const projectTypeIcons = {
   ads_commercial: ShoppingBag,
   fashion: Shirt,
   event_documentation: Camera,
-  youtube: Youtube,
-  animation_video: Clapperboard
+  youtube: Youtube
 };
 
 const projectTypeLabels = {
@@ -37,8 +35,7 @@ const projectTypeLabels = {
   ads_commercial: "Ads/Commercial",
   fashion: "Fashion",
   event_documentation: "Event Documentation",
-  youtube: "YouTube",
-  animation_video: "Animation Video"
+  youtube: "YouTube"
 };
 
 export default function Dashboard() {
