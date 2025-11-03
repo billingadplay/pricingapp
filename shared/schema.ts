@@ -9,7 +9,8 @@ export const projectTypes = [
   "ads_commercial",
   "fashion",
   "event_documentation",
-  "youtube"
+  "youtube",
+  "animation_video"
 ] as const;
 
 export type ProjectType = typeof projectTypes[number];
@@ -141,21 +142,21 @@ export const complexityQuestions: ComplexityQuestion[] = [
     question: "Skala perusahaan (UMKM–Enterprise)?",
     description: "Ukuran dan budget capacity klien",
     weight: 1.3,
-    applicableTypes: ["company_profile", "ads_commercial"],
+    applicableTypes: ["company_profile", "ads_commercial", "animation_video"],
   },
   {
     id: "hospitality_needs",
     question: "Kira² client perlu Hospitality, tailored deck, offline meeting intensif?",
     description: "Level profesionalisme dan presentasi yang dibutuhkan",
     weight: 1.1,
-    applicableTypes: ["company_profile", "ads_commercial", "fashion"],
+    applicableTypes: ["company_profile", "ads_commercial", "fashion", "animation_video"],
   },
   {
     id: "client_type",
     question: "Clientnya product/service?",
     description: "Tipe bisnis klien (product-based vs service-based)",
     weight: 0.9,
-    applicableTypes: ["company_profile", "ads_commercial"],
+    applicableTypes: ["company_profile", "ads_commercial", "animation_video"],
   },
   {
     id: "concept_ownership",
