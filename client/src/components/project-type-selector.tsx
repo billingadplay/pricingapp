@@ -1,5 +1,5 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Building2, ShoppingBag, Shirt, Camera, Youtube, Clapperboard } from "lucide-react";
+import { Building2, ShoppingBag, Shirt, Camera, Youtube } from "lucide-react";
 import type { ProjectType } from "@shared/schema";
 
 const projectTypeConfig = {
@@ -37,13 +37,6 @@ const projectTypeConfig = {
     description: "Content creation, vlogs, tutorials, dan digital media",
     color: "text-red-600 dark:text-red-400",
     bgColor: "bg-red-600/10"
-  },
-  animation_video: {
-    icon: Clapperboard,
-    title: "Animation Video",
-    description: "Explainer, motion graphics, dan animated storytelling projects",
-    color: "text-amber-600 dark:text-amber-400",
-    bgColor: "bg-amber-600/10"
   }
 };
 
