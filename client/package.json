@@ -1,0 +1,10 @@
+{
+  "name": "pricing-client",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "typecheck": "tsc --noEmit -p tsconfig.json",
+    "build": "vite build"
+  }
+}

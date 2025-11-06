@@ -1,0 +1,48 @@
+import { defineConfig } from "vite";
+import react from "@vitejs/plugin-react";
+import path from "path";
+import runtimeErrorOverlay from "@replit/vite-plugin-runtime-error-modal";
+
+const rootDir = import.meta.dirname;
+
+export default defineConfig({
+  plugins: [
+    react(),
+    runtimeErrorOverlay(),
+    ...(process.env.NODE_ENV !== "production" &&
+    process.env.REPL_ID !== undefined
+      ? [
+          await import("@replit/vite-plugin-cartographer").then((m) =>
+            m.cartographer(),
+          ),
+          await import("@replit/vite-plugin-dev-banner").then((m) =>
+            m.devBanner(),
+          ),
+        ]
+      : []),
+  ],
+  resolve: {
+    alias: {
+      "@": path.resolve(rootDir, "src"),
+      "@shared": path.resolve(rootDir, "..", "shared"),
+      "@assets": path.resolve(rootDir, "..", "attached_assets"),
+    },
+  },
+  root: rootDir,
+  build: {
+    outDir: path.resolve(rootDir, "dist"),
+    emptyOutDir: true,
+  },
+  server: {
+    fs: {
+      strict: true,
+      deny: ["**/.*"],
+    },
+    proxy: {
+      "/api": {
+        target: "http://127.0.0.1:3000",
+        changeOrigin: true,
+      },
+    },
+  },
+});
