@@ -1,0 +1,12 @@
+{
+  "name": "pricing-server",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "cross-env NODE_ENV=development tsx index.ts",
+    "db:push": "drizzle-kit push --config ../drizzle.config.cjs --force",
+    "seed": "tsx scripts/seed.ts",
+    "typecheck": "tsc --noEmit -p tsconfig.json",
+    "build": "esbuild index.ts --bundle --platform=node --format=esm --outfile=dist/index.js --external:@neondatabase/* --external:pg --external:drizzle-orm --external:playwright --packages=external"
+  }
+}
