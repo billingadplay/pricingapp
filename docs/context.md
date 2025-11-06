@@ -1,4 +1,4 @@
-# Video Pricing Tool — MVP Product Spec test
+# Video Pricing Tool — MVP Product Spec
 
 Implementation-ready reference for the videography pricing MVP. Focus on delivering a defensible quote in minutes, exportable as PDF or screenshot-ready image.
 
